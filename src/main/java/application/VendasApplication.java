@@ -24,7 +24,7 @@ public class VendasApplication {
 	/*Utilizamos o @Qualifier para chamar o bean em outras classes. */
 	@Qualifier("nomedaAplicacao")
 	private String apresentarTela;
-	
+	 
 	/*Faz o mapeamento de uma chamada indicando o caminho a função "GET"*/
 	@GetMapping("/hello")
 	public String helloWorld() {
