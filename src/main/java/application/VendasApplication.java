@@ -1,5 +1,7 @@
 package application;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +16,20 @@ SpringApplicatin.run("Classe que inicializa o programa.class",args);*/
  */
 @RestController
 public class VendasApplication {
+	
+	/*O @Autowired permite que o próprio Spring gerencie os objetos instanciados de outras
+	 * para serem utilizados na classe em questão
+	 */
+	@Autowired
+	/*Utilizamos o @Qualifier para chamar o bean em outras classes. */
+	@Qualifier("nomedaAplicacao")
+	private String apresentarTela;
+	
 
 	/*Faz o mapeamento de uma chamada indicando o caminho a função "GET"*/
 	@GetMapping("/hello")
 	public String helloWorld() {
-		return "hello world";
+		return apresentarTela;
 	}
 	
 	public static void main(String[] args) {
