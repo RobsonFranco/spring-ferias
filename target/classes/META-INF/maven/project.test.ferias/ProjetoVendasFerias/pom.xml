@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>project.test.ferias</groupId>
+	<artifactId>ProjetoVendasFerias</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.4.RELEASE</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
+<!--O Maven é uma ferramenta utilizada para gerenciar projetos em Java e 
+simplificar a vida do programador, auxiliando no ciclo de desenvolvimento 
+incluindo compilação, controle de bibliotecas, distribuição e relatórios estatísticos. 
+O projeto nasceu a partir das dificuldades encontradas principalmente em gerenciar a 
+compilação de projetos e no controle de bibliotecas. 
+
+O Maven possui funcionalidades similares ao mais conhecido Apache Ant,
+ mas utiliza um mecanismo de configuração declarativo e baseado no conceito 
+ de convenção ao invés de configuração. Isso permite, por exemplo,
+  a compilação e a distribuição de uma aplicação com um arquivo de configuração mínimo, 
+  apenas seguindo algumas convenções estabelecidas. A configuração do Maven se baseia 
+  em um único arquivo, chamado pom.xml, que contém os metadados de um projeto.
+   É a partir deste arquivo que toda a mágica por trás do Maven acontece. 
+   
+   Dependências do Spring sendo utilizada 2.2.4 (Existem mais recentes, essa segue o curso). 
+
+ 
+
+Tudo que colocamos no POM.xml atribui funções novas ao projeto. 
+
+Exemplo: 
+
+ * O parente indica que esse é um projeto Spring e todas as funções listadas no POM.xml 
+ irão seguir a sua versão. 
+
+ * A dependência indica traz todas as funcionalidades básicas de um projeto Spring. -->
+
