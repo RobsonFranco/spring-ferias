@@ -15,6 +15,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+		
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -52,5 +57,12 @@ Exemplo:
  * O parente indica que esse é um projeto Spring e todas as funções listadas no POM.xml 
  irão seguir a sua versão. 
 
- * A dependência indica traz todas as funcionalidades básicas de um projeto Spring. -->
+ * A dependência indica traz todas as funcionalidades básicas de um projeto Spring. 
+ 
+ *********************************************
+dependency
+groupId org.springframework.boot /groupId 
+artifactId spring-boot-starter-web /artifactId 
+/dependency 
 
+Dependencia que configura a parte web para o Spring boot.-->
