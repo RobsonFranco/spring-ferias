@@ -11,11 +11,5 @@ import org.springframework.context.annotation.Configuration;
 public class MinhasConfiguracoes {
 	
 	
-	/*A notação @Bean trabalha em conjunto com a @Configuration na classe especifica para configurações. 
-O Bean sugere nomes melhores para que a configuração feita seja utilizada e outras classes.
-Neste caso estamos chamando em algum lugar o conteudo desse metodo "applicationName" porém, pelo nome "nomedaAplicacao"*/
-	@Bean(name = "nomedaAplicacao")
-	public String applicationName() {
-		return "Treino de Férias";
-	}
+	
 }
