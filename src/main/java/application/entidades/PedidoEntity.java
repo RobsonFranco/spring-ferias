@@ -30,6 +30,12 @@ public class PedidoEntity {
 	@Column(name="total", length = 20, precision = 2)
 	private BigDecimal total;
 	
+	public List<ItemPedidoEntity> getItens() {
+		return itens;
+	}
+	public void setItens(List<ItemPedidoEntity> itens) {
+		this.itens = itens;
+	}
 	@OneToMany(mappedBy ="pedido")
 	private List<ItemPedidoEntity> itens;
 	

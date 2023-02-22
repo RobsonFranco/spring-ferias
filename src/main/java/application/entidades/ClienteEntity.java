@@ -31,6 +31,19 @@ public class ClienteEntity {
 	private Set<PedidoEntity> pedidos;
 
 	
+	// Construtores--------------------------------------------------
+	public ClienteEntity() {
+	}
+
+	public ClienteEntity(Integer id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
+
+	public ClienteEntity(String nome) {
+		this.nome = nome;
+	}
+	
 
 	public Set<PedidoEntity> getPedidos() {
 		return pedidos;
@@ -54,6 +67,11 @@ public class ClienteEntity {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	@Override
+	public String toString() {
+		return "ClienteEntity [id=" + id + ", nome=" + nome + "]";
 	}
 
 }

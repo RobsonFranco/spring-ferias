@@ -1,12 +1,19 @@
 package application;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import application.entidades.ClienteEntity;
+import application.repository.ClienteRepository;
 
 /*Quando usamos essa notação podemos colocar na classe main o comando
 SpringApplicatin.run("Classe que inicializa o programa.class",args);*/
@@ -28,9 +35,30 @@ public class VendasApplication {
 		return apresentarTela;
 	}
 	
+		@Bean
+	public CommandLineRunner init(@Autowired ClienteRepository objCliente) {
+		return args->{
+			System.out.println("SALVANDO CLIENTES:");
+			objCliente.save(new ClienteEntity("Robson"));
+			
+			System.out.println("EXIBINDO CLIENTES");
+
+			List<ClienteEntity> todosClientes = objCliente.findAll();
+			todosClientes.forEach(System.out::println);
+			
+			objCliente.save(new ClienteEntity("Renan"));
+			
+			System.out.println("ATUALIZANDO LISTA DE CLIENTES:");
+			todosClientes = objCliente.findAll();
+			todosClientes.forEach(System.out::println);
+		};
+	}
+		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(VendasApplication.class, args);
 	}
+	
+
 
 }
