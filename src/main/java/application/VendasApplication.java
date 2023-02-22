@@ -51,6 +51,14 @@ public class VendasApplication {
 			System.out.println("ATUALIZANDO LISTA DE CLIENTES:");
 			todosClientes = objCliente.findAll();
 			todosClientes.forEach(System.out::println);
+			
+			List<ClienteEntity> teste = objCliente.findByNomeLike("Robson");
+					
+			if(teste.isEmpty()) {
+				System.out.println("Cliente não Encontrado");
+			}else {
+				System.out.println("Existe");
+			}
 		};
 	}
 		
